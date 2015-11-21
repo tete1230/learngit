@@ -3,4 +3,5 @@ Git is free software.
 Git 是自由软件
 Git has a mutable index called stage.
 
-Creating a new branch is quick & simple.
+修改readme.txt最后一行，改为：
+Creating a new branch is quick AND simple..
