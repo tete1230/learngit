@@ -1,0 +1,814 @@
+@charset "utf-8";
+
+html, body {height:100%; width: 100%; margin:0; padding:0;}
+
+.clearfix:before, .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+ *zoom: 1;
+}
+
+img.center {display:block;margin:0 auto;}
+
+img.left {float:left;margin-right:10px;}
+
+img.right  {float:right;margin-left:10px;}
+
+img.border  {border:1px solid #333;}
+
+section {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+section .container {
+    position: relative;
+    text-align: center;
+}
+section .col12 {
+    margin-bottom: 0
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: left;
+    transition: font-size 0.5s ease 0s;
+    text-rendering: optimizelegibility;
+}
+h1 strong {
+    font-weight: bold
+}
+p {
+    font-size: 20px;
+}
+
+/* Extending headers */
+h2 {
+    text-align: left;
+    background: black;
+    height: 90px;
+    color: white;
+    line-height: 90px;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0 -500%;
+    padding: 0 500%;
+}
+h2 span {
+    position:absolute; top:-90px;
+}
+h3 {
+    color: black;
+    line-height: 90px;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* header */
+
+header {
+    margin-bottom: 0;
+}
+header .container {
+    padding: 0;
+}
+
+.cbp-af-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #ec4a01;
+    z-index: 10000;
+    overflow: hidden;
+    box-shadow: 0 10px 20px;
+    -webkit-transition: height 0.6s;
+    -moz-transition: height 0.6s;
+    transition: height 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.cbp-af-header .cbp-af-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /*padding: 0 1.875em;*/
+}
+.ibv-logo {
+    float: left;
+    width: 400px;
+    height: 200px;
+    background-size: contain;
+    background: url(../images/logo.png) no-repeat 0 0;
+    transition: background-position 0.6s ease-in-out 0s;
+}
+.ibv-logo a {
+    display: block;
+    width: 400px;
+    height: 200px;
+}
+/* modernizr no svg */
+.no-inlinesvg .ibv-logo {
+    background: url(../images/ibv-logo.png) no-repeat scroll 0 0;
+    display: block;
+    width: 400px;
+    height: 200px;
+}
+
+.cbp-af-header nav {
+    display: inline-block;
+    position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.cbp-af-header nav a {
+    line-height: 200px;
+}
+
+.cbp-af-header nav {
+    float: right;
+}
+
+.cbp-af-header nav a {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    float: left;
+    padding: 0 20px;
+}
+
+.cbp-af-header nav a:hover {
+    text-decoration: none;
+    background: #c80500;
+}
+
+/* Transitions and class for reduced height */
+.cbp-af-header nav a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.cbp-af-header.cbp-af-header-shrink {
+    height: 90px;
+    background: black;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+.cbp-af-header.cbp-af-header-shrink .ibv-logo {
+    background-position: 0 -200px;
+    transition: background-position 0.6s ease-in-out 0s;
+}
+/* modernizr no svg */
+.no-inlinesvg .cbp-af-header.cbp-af-header-shrink .ibv-logo {
+    background: url(../media/ibv-logo-shrink.png) no-repeat scroll 0 0;
+}
+.cbp-af-header.cbp-af-header-shrink .ibv-logo a {
+    display: block;
+    width: 100px;
+    height: 90px;
+}
+.cbp-af-header.cbp-af-header-shrink nav a:hover, .cbp-af-header.cbp-af-header-shrink nav li.current a {
+    background: #514a4a
+}
+
+.cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 90px;
+}
+
+.cbp-af-header.cbp-af-header-shrink h1 {
+    font-size: 2em;
+}
+
+
+/* intro section */
+.intro {
+    height: 100%;
+    min-height: 768px;
+    width: 100%;
+    background: url(../images/intro.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 0;
+    display: table;
+}
+.intro h1 {
+    color: #ffefbb;
+    line-height: 48px;
+    margin-top: 100px;
+    opacity: .9;
+    text-shadow: 3px 3px 3px;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+}
+.intro .container {
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .container .col12 {
+    margin: 0 auto;
+    max-width: 1200px;
+    float: none
+}
+.intro .container .col12 .intro-hold {
+}
+.intro-spot {
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #ec4a01;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 30px;
+}
+.intro-spot:nth-of-type(3) {
+    margin: 0;
+}
+.intro-spot span {
+    font-size: 65px;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    line-height: 120px;
+    margin-bottom: -20px
+}
+.page-down {
+    position: absolute;
+    bottom:5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-name: hover;
+}
+.page-down a {
+    color: white
+}
+
+/* about me section */
+.aboutme .container .col12 {
+    padding: 20px 0;
+}
+.aboutme .col2:nth-of-type(6n+6) {
+    margin-right: 0
+}
+.aboutme img.center {
+    margin: 20px auto;
+}
+
+/* portfolio section */
+section.portfolio figure {
+    width: 33.333%;
+    float: left;
+    position: relative
+}
+section.portfolio figure img {
+    width: 100%;
+    height: auto;
+}
+section.portfolio {
+    background: black;
+}
+section.portfolio .col12 {
+    position: relative;
+}
+section.portfolio figure {
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+section.portfolio figure:hover figcaption, section.portfolio figure:hover img {
+    opacity: 1;
+}
+section.portfolio img {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 4;
+    opacity:0.4;
+}
+section.portfolio figcaption {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+section.portfolio .caption-text {
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background: rgb(0, 0, 0); /* The Fallback */
+    background: rgba(0, 0, 0, 0.7);
+}
+section.portfolio .caption-text h1 {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 28px;
+}
+
+/* responsive design section */
+
+.responsive-design .container .col12 {
+    padding: 40px 0;
+}
+.responsive-design p {
+}
+
+/* contact section */
+.contact {
+    height: 100%;
+    width: 100%;
+    background: url(../images/contact.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact p {
+    margin: 0;
+    text-align: left;
+    color: white;
+    float: left;
+    margin-right: 20px;
+}
+.contact i {
+    font-size: 120px;
+}
+.contact a:link, .contact a:visited, .contact a:active {
+    color: white;
+    text-decoration: none;
+}
+.contact a:hover {
+    color: black
+}
+.follow {
+    margin-top: 30%
+}
+.follow h3 {
+    color: white;
+    text-align: left;
+    /*text-shadow: 1px 1px 1px #000, 3px 3px 5px #333;*/
+}
+
+footer {
+    background: #f1f1f1;
+    color: #949494;
+    height: 90px;
+    margin: 0;
+    line-height: 90px;
+}
+footer .col12 {
+    margin-bottom: 0;
+    line-height: 90px;
+    height: 90px;
+}
+
+/* navigation bar */
+
+.nav-container {
+  height: 200px;
+  width: 100%;
+}
+
+.nav-container-inner {
+  float: right;
+
+}
+.navigation-primary {
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+.navigation-primary ul {
+  margin: 0px;
+}
+
+.navigation-primary li {
+  float: left;
+  padding: 0px;
+  text-align: right;
+}
+
+.navigation-primary li a i {
+  display: inline;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#mobile-header {
+  display: none;
+  height: 90px;
+  text-align: right;
+}
+
+#mobile-header #menu-button {
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  padding: 4px 10px;
+  line-height: 90px;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: right;
+}
+
+/* scroll back to top */
+.back-to-top {
+  position: fixed;
+  -webkit-backface-visibility: hidden;  /* hack for android 2.3 positioning */
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: white;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.50;
+  display:none;
+  z-index: 5000;
+}
+
+.back-to-top:hover {
+  color: white;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+  filter: alpha(opacity=99);
+  opacity: 0.99;
+ 
+}
+
+.back-to-top i{
+  font-size: 60px;
+}
+
+header.back {
+    background: black url(../images/ibv-back.png) no-repeat center center scroll;
+    width: 106px;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-transition: height 0.6s;
+    -moz-transition: height 0.6s;
+    transition: height 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+header.back a {
+    display: block;
+    width: 106px;
+    height: 90px;
+}
+.portfolio-intro {
+    display: table;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    margin: 0 auto;
+    position: relative
+}
+.portfolio-intro .container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.portfolio-intro .container .col12 {
+}
+.portfolio-intro h1 {
+    color: black;
+    text-align: center
+}
+.portfolio-intro .page-down a {
+    color: black
+}
+
+.portfolio-content {
+    padding-top: 40px;
+}
+.portfolio-content p {
+    text-align: left;
+    margin: 0;
+    font-size: 18px
+}
+.portfolio-content .col6 {
+    line-height: 40px;
+    height: 40px;
+    color: #999;
+    margin-top: 20px;
+}
+.portfolio-content .col6:nth-of-type(2n+1) p {
+    text-align: right
+}
+    
+.portfolio-content .col6 i {
+    font-size: 24px;
+}
+.portfolio-content .col6 a:link, .portfolio-content .col6 a:visited, .portfolio-content .col6 a:active {
+    color: black;
+}
+
+@media all and (max-width: 1024px) {
+
+p {
+    font-size: 18px;
+}
+.intro {
+    min-height: inherit
+}
+.intro h1 {
+    margin-top: 45px;
+}
+.content {
+    margin-top: 150px;
+}
+.nav-container {
+  height: 90px;
+}
+.cbp-af-header {
+    height: 90px;
+}
+.cbp-af-header nav a {
+    line-height: 90px;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+.ibv-logo {
+    float: left;
+    width: 300px;
+    height: 90px;
+    background-size: contain;
+    background: url(../images/logo-m.png) no-repeat 0 0;
+    transition: none;
+}
+.ibv-logo a {
+    display: block;
+    width: 300px;
+    height: 90px;
+}
+/* modernizr no svg */
+.no-inlinesvg .ibv-logo {
+    background: url(../images/ibv-logo-sm.png) no-repeat scroll 0 0;
+    display: block;
+    width: 300px;
+    height: 90px;
+}
+.cbp-af-header.cbp-af-header-shrink .ibv-logo {
+    background-position: top;
+    transition: none;
+}
+.cbp-af-header.cbp-af-header-shrink .ibv-logo a {
+    width: 300px;
+    height: 90px;
+}
+
+section.portfolio figure {
+    width: 50%;
+}
+section.portfolio figcaption, section.portfolio .caption-text {
+    display: none;
+}
+section.portfolio img {
+    opacity:1;
+}
+
+}
+
+@media all and (max-width: 768px) {
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8,
+.col9,
+.col10,
+.col11,
+.social {
+    text-align: center
+}
+.content {
+    margin-top: 20px;
+}
+.coming-soon p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.coming-soon img {
+    float: none;
+    margin-bottom: 20px;
+}
+.copyright {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.intro {
+    margin-bottom: -90px;
+}
+.intro h1 {
+    font-size: 42px;
+    margin-top: -90px;
+}
+.page-down {
+    bottom:130px;
+}
+.cbp-af-header {
+    position: static;
+    transition: none;
+}
+.nav-container {
+  display: none;
+}
+.cbp-af-header nav a {
+    transition: none;
+}
+.cbp-af-header.cbp-af-header-shrink {
+    height: 90px;
+    background: #db2e2a;
+    transition: none;
+}
+.cbp-af-header.cbp-af-header-shrink .ibv-logo a {
+    width: 215px;
+    height: 60px;
+}
+#mobile-header {
+  display: block;
+  width: 100%;
+  z-index: 200;
+  text-align: right;
+}
+h2 span {
+    position:absolute; top:0px;
+}
+
+.aboutme .col2 {
+    width: 31.33333%;
+}
+.aboutme .col2:nth-of-type(3n+3) {
+    margin-right: 0
+}
+.portfolio-intro .page-down {
+    bottom: 5%;
+}
+.portfolio-content .col6 {
+    width: 48.50000%;
+}
+
+
+}
+
+@media all and (max-width: 680px) {
+
+.devices { display: none; }
+
+.intro h1 {
+    font-size: 36px;
+    line-height: normal;
+}
+.intro-spot {
+    width: 115px;
+    height: 115px;
+    margin-right: 15px;
+}
+.intro-spot span {
+    font-size: 45px;
+    line-height: 80px;
+}
+
+.contact p {
+    margin-right: 10px;
+}
+.contact i {
+    font-size: 100px;
+}
+
+}
+
+@media all and (max-width: 480px) {
+    
+p {
+    font-size: 16px;
+}
+#mobile-header {
+  height: 60px;
+}
+#mobile-header #menu-button {
+  line-height: 60px;
+}
+.nav-container {
+  height: 60px;
+}
+.cbp-af-header {
+    height: 60px;
+}
+.cbp-af-header nav a {
+    line-height: 60px;
+}
+.cbp-af-header.cbp-af-header-shrink {
+    height: 60px;
+}
+.ibv-logo {
+    width: 215px;
+    height: 60px;
+    background: url(../images/ibv-logo-mobile.svg) no-repeat 0 0;
+}
+.ibv-logo a {
+    width: 215px;
+    height: 60px;
+}
+/* modernizr no svg */
+.no-inlinesvg .ibv-logo {
+    background: url(../images/ibv-logo-mobile.png) no-repeat scroll 0 0;
+    display: block;
+    width: 215px;
+    height: 60px;
+}
+.intro {
+    margin-bottom: -60px;
+}
+.intro h1 {
+    font-size: 28px;
+}
+.intro-spot {
+    display: none;
+}
+.page-down {
+    bottom: 90px;
+}
+h2 {
+    font-size: 28px;
+}
+.contact i {
+    font-size: 65px;
+}
+h3 {
+    line-height: normal;
+    font-size: 28px;
+    margin: 0;
+}
+header.back {
+    background: black url(../images/ibv-back-mobile.png) no-repeat center center scroll;
+    width: 71px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999
+}
+header.back a {
+    display: block;
+    width: 71px;
+    height: 60px;
+}
+.portfolio-intro h1 {
+    font-size: 28px;
+}
+.portfolio-content p {
+    font-size: 14px;
+}
+
+}

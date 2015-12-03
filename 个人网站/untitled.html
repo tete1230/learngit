@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- below line used to stop IE reverting to Compatible/Quirks mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+<title>L K M 个人网站</title>
+<link href="http://www.inspiredbyvision.co.uk/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<!-- scripts -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/ios.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+<script type="text/javascript">
+    window.onload = function () {
+    if (!Modernizr.svg) {
+    $('img[src*="svg"]').attr('src', function () {
+    return $(this).attr('src').replace('.svg', '.png');
+    });
+    }
+    }
+</script>
+
+<!-- Mobile side menu -->
+<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+    $('#menu-button').sidr({
+      name: 'sidr-main',
+      source: '.nav-container',
+      side: 'right',
+      renaming: false,
+      speed: 200
+    });
+  });
+ 
+  $(window).resize(function(){
+    $.sidr('close', 'sidr-main');
+  });
+ 
+  $(document).click(function ()
+    {$.sidr('close', 'sidr-main');
+  });
+ 
+</script>
+
+<!-- scroll to -->
+<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="js/jquery.nav.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#sidr-id-nav').onePageNav({
+           begin: function() {
+        //Hack so you can click other menu items after the initial click
+        $('body').append('<div id="device-dummy" style="height: 1px;"></div>');
+    },
+    end: function() {
+        $('#device-dummy').remove();}
+     });
+    
+    
+    $('#nav').onePageNav({
+         scrollOffset: 0,
+          begin: function() {
+        //Hack so you can click other menu items after the initial click
+        $('body').append('<div id="device-dummy" style="height: 1px;"></div>');
+    },
+    end: function() {
+        $('#device-dummy').remove();}
+    });
+    
+    $('.page-down').onePageNav({
+     });
+    
+    })
+    
+</script>
+
+<!-- scroll back to top -->
+
+<script type="text/javascript">
+    $(function () {
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 120) {
+            $('.back-to-top').fadeIn();
+          } else {
+            $('.back-to-top').fadeOut();
+          }
+      });
+      $('.back-to-top').click(function () {
+        $('body,html').animate({scrollTop: "0px" }, 500);
+        return false;
+      });
+    });
+</script>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23238328-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</head>
+
+<body id="top">
+
+<div class="grid">
+
+    <header>
+        <div class="container">
+            
+            <div class="cbp-af-header">
+                <div class="cbp-af-inner">
+                    
+                    <div class="ibv-logo"><a href=""></a></div>
+                    <div id="mobile-header">
+                        <a id="menu-button" href="#sidr-main"><i class="fa fa-reorder fa-lg"></i></a>
+                    </div>
+                    
+                    <div class="nav-container">
+                        <div class="nav-container-inner" onclick="$.sidr('close', 'sidr-main')">
+                            <nav class="navigation-primary">
+                                <ul id="nav">
+                                    <li><a href="#aboutme">关于我</a></li>
+                                    <li><a href="#mywork">案例</a></li>
+                                    <li><a href="#responsivedesign">响应式设计</a></li>
+                                    <li><a href="#contact">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    
+    <section class="intro">
+        <div class="container">
+            
+            <div class="col12">
+                
+                    
+                <h1>Hello, 我是 L K M - <strong>Developer & Designer</strong><br>
+                html5 & CSS3  JavaScript & jQuery </h1>
+                
+                <div class="intro-spot"><span>10</span> 年以上网络工作经验</div>
+                
+                
+                <div class="page-down animated bounce"><a href="#aboutme"><i class="fa fa-arrow-circle-down fa-4x"></i></a></div>
+                        
+                                    
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="aboutme">
+        
+          <div class="container">
+              <h2><span id="aboutme"></span>关于我</h2>
+              <div class="col12">
+              
+                    <img src="images/aaron-hargreaves.png" alt="lin ke ming" class="center">
+                    <p>作为一个网页设计师和前端开发人员，我一直在建立互动体验，创造品牌和设计印刷材料超过十年。结构，设计和代码的简单性和一致性是非常重要的，我觉得应该在每个项目中都流。</p>
+
+                    <p>我的几个优势是创新概念设计，艺术指导，创作方向，UI / UX设计，前端开发和设计之间的桥梁沟通，开发和营销团队。</p>
+                    
+                    <p>我找到灵感，自然，建筑，摄影，艺术，历史和苏格兰鸡蛋。当我不工作的时候，你可以在一家当地的咖啡馆里找到我，在健身房里探索一个城市，在健身房里，甚至在享受一个真正的啤酒。</p>
+                    
+                    <h3>技能</h3>
+                    
+                    <div class="col2"><img src="images/skills/mac.png" alt="Mac"></div>
+                    <div class="col2"><img src="images/skills/pc.png" alt="PC"></div>
+                    <div class="col2"><img src="images/skills/html5.png" alt="HTML5"></div>
+                    <div class="col2"><img src="images/skills/css3.png" alt="CSS3"></div>
+                    <div class="col2"><img src="images/skills/js.png" alt="js"></div>
+                    <div class="col2"><img src="images/skills/jquery.png" alt="jQuery"></div>
+                    
+                    <h3>软件熟练</h3>
+                    
+                    <div class="col2"><img src="images/skills/dw.png" alt="Adobe Dreamweaver"></div>
+                    <div class="col2"><img src="images/skills/ps.png" alt="Adobe Photoshop"></div>
+                    <div class="col2"><img src="images/skills/ai.png" alt="Adobe Illustrator"></div>
+                    <div class="col2"><img src="images/skills/fw.png" alt="Adobe Fireworks"></div>
+                    
+                    <div class="col2"><img src="images/skills/ae.png" alt="Adobe AE"></div>
+                    <div class="col2"><img src="images/skills/fl.png" alt="Adobe Flash"></div>
+              
+              </div>
+              
+          </div>
+        
+    </section>
+    
+    <section class="portfolio">
+        
+          <div class="container">
+              <h2><span id="mywork"></span>案例</h2>              
+          </div>
+          
+          <div class="col12">
+              
+              <figure class="project">
+                  <a href="really-good-domains.html">
+                      <img src="images/portfolio/rgd-thumb.jpg" alt="Really Good Domains Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>Really Good Domains</h1>
+                              <p>Art Direction, UI/UX Design, HTML5/CSS3, jQuery</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+              <figure>
+                  <a href="polkey-collins-associates.html">
+                      <img src="images/portfolio/pcassociates-thumb.jpg" alt="PC Associates Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>Polkey Collins Associates</h1>
+                              <p>Art Direction, UI/UX Design, HTML5/CSS3</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+              <figure>
+                  <a href="hello-katy.html">
+                      <img src="images/portfolio/hellokaty-thumb.jpg" alt="Hello Katy Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>Hello Katy</h1>
+                              <p>UI/UX Design, HTML/CSS, jQuery</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+              <figure>
+                  <a href="fleet-directory.html">
+                      <img src="images/portfolio/fd-thumb.jpg" alt="Fleet Directory Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>Main Dealer Offers</h1>
+                              <p>Art Direction, UI/UX Design</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+              <figure>
+                  <a href="contract-hire-and-leasing.html">
+                      <img src="images/portfolio/chal-thumb.jpg" alt="Contract Hire And Leasing Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>Contract Hire And Leasing</h1>
+                              <p>Art Direction, UI/UX Design, HTML5/CSS3, jQuery</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+              <figure>
+                  <a href="jrw.html">
+                      <img src="images/portfolio/jrw-thumb.jpg" alt="JRW Project">
+                      <figcaption>
+                          <div class="caption-text">
+                              <h1>JRW</h1>
+                              <p>Art Direction, UI/UX Design, HTML5/CSS3, jQuery</p>
+                          </div>
+                      </figcaption>
+                  </a>
+              </figure>
+              
+          </div>
+        
+    </section>
+    
+    <section class="responsive-design">
+        
+          <div class="container">
+              <h2><span id="responsivedesign"></span>响应式设计</h2>
+              <div class="col12">
+              
+                    <img src="images/ibv-responsive.png" alt="Inspired by Vision responsive screenshots" class="center">
+                    
+                    <h3>未来的设计</h3>
+                    
+                    <p>手机和平板电脑用户增加开发智能是重要的，直观的用户体验设计。我一直认为一个成功的网站是一个提供最佳的质量浏览体验。</p>
+
+                    <p>我喜欢造型设计专注于用户需求的挑战。</p>
+                    
+                    <p>响应式的设计无疑让我们的设计师和开发者把重点放在用户体验上比平常更多。用户将根据他们使用的设备和他们在哪里，他们在使用一个智能手机坐在沙发上，在沙发上使用平板电脑或在他们的办公桌上使用PC。某些内容可能没有必要在移动的水平，所以该网站可能需要减少的内容，所以它有更多的用户友好。 </p>
+                    
+                    <p>提供一个应用程序类似的经验，移动环境需要更简单的导航，专注的内容和快速页面加载。在后轮驱动的用户将不得不使用捏和缩放，滚动和挖掘技术来访问内容。一个敏感的网站应该减少需要与网站互动的手指动作量。</p>
+                    
+                    <img src="images/finger-gestures.png" alt="Finger Gestures" class="center">
+                    
+                    <p>该行业将永远改变与不同规模的不同规模的设备在过去一直在过去的障碍。响应式设计是一种技能，解决问题前进是一种未来的友好运动。</p>
+                    
+                    <p>随着网络设计行业的不断发展，它无疑使我的工作更有趣。</p>
+              
+              </div>
+              
+          </div>
+        
+    </section>
+    
+    <section class="contact">
+        
+          <div class="container">
+              <h2><span id="contact"></span>联系</h2>
+              <div class="col12">
+                    <div class="follow">
+                        <h3>联系我的方式</h3>
+                        <p><a href="mailto:"><i class="fa fa-envelope"></i></a>
+                        <p><a href="http://www.linkedin.com/pub/aaron-hargreaves/18/b17/ab4" target="_blank"><i class="fa fa-linkedin-square"></i></a></p>
+                        <p><a href="http://www.twitter.com/IBVDesign" target="_blank"><i class="fa fa-twitter-square"></i></a></p>
+                        <p><a href="http://instagram.com/aaron_hargreaves" target="_blank"><i class="fa fa-instagram"></i></a></p>
+                    </div>
+              </div>
+          </div>
+        
+    </section>
+    
+    <footer>
+        <div class="container">
+            
+              <div class="col12">
+                  © Copyright <script>document.write(new Date().getFullYear())</script> Inspired By Vision
+              </div>
+                
+        </div>
+    </footer>
+
+</div>
+
+<a href="#top" class="back-to-top"><i class="fa fa-arrow-circle-up"></i></a>
+
+<script src="js/class.js"></script>
+<script src="js/header.min.js"></script>
+</body>
+</html>
+
